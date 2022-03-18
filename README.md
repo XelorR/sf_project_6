@@ -9,4 +9,4 @@ Made by:
 
 ## Notebooks
 
-- [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) by [MichaelDockers](https://github.com/MichaelDockers)
+- [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) - [366 rows saved](data/parsed_first_pages.pkl.zip)
