@@ -1,6 +1,6 @@
 # Project 6: predicting car prices
 
-Skillfactory, Data Science PRO course
+Skillfactory, Data Science PRO course, [kaggle competition](https://www.kaggle.com/c/sf-dst-car-price-prediction)
 
 Made by:
 
