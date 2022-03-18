@@ -1,3 +1,8 @@
-# sf_project_6
-Skillfactory Data Science Course, project 6: predicting car prices
-Author
+# Project 6: predicting car prices
+
+Skillfactory, Data Science PRO course
+
+Made by:
+
+- [XelorR](https://github.com/XelorR)
+- [MichaelDockers](https://github.com/MichaelDockers)
