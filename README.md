@@ -18,3 +18,4 @@ Made by:
 
 - [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) - [366 rows saved](data/parsed_first_pages.pkl.zip)
 - [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb) - first view
+- [UsedCars_Project_Module_6.ipynb](UsedCars_Project_Module_6.ipynb) - updated parser
