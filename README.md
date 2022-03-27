@@ -31,7 +31,7 @@ source venv/bin/activate
 
 - to do
 
-### Temporary states saved
+### Temporary saved states
 
 - [data/parsed_first_pages.pkl.zip](data/parsed_first_pages.pkl.zip) - 366 rows, first try
 - [data/20220326_valid_data.pkl.zip](data/20220326_valid_data.pkl.zip) - car data parsed from auto.ru (infinity only)
