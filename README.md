@@ -5,7 +5,7 @@ Skillfactory, Data Science PRO course, [kaggle competition](https://www.kaggle.c
 Made by:
 
 - Petr Polyakov - [Kaggle](https://www.kaggle.com/xelorrelin), [GitHub](https://github.com/XelorR), [GitLab](https://gitlab.com/XelorR)
-- Michael Vasiliev - [Kaggle](https://www.kaggle.com/michaelvasiliev). [GitHub](https://github.com/MichaelDockers)
+- Michael Vasiliev - [Kaggle](https://www.kaggle.com/michaelvasiliev), [GitHub](https://github.com/MichaelDockers)
 
 ## Setup and requirements
 
