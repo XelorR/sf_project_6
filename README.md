@@ -50,6 +50,6 @@ source venv/bin/activate
 - [ ] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
 - [ ] new - Petr - analyze number of pages to parse for each model and propose model split
 - [ ] new - both - run parser separately on several machines
-- [ ] org - Petr - form a Kaggle Team
+- [x] org - Petr - form a Kaggle Team
 - [ ] new - Petr - add "baseline" train dataset and ensure it's consistency vs test
 - [ ] org - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
