@@ -17,10 +17,15 @@ source venv/bin/activate
 
 ## Data
 
+### Train-test-submission
+
 - [data/train_df_full_part1.pkl.zip](data/train_df_full_part1.pkl.zip) - train dataset by [Jane Voytik](https://www.kaggle.com/datasets/eugeniavoytik/final-car-price-prediction-df-parsed-sep-2021)
 - [data/all_auto_ru_09_09_2020.pkl.zip](data/all_auto_ru_09_09_2020.pkl.zip) - train dataset from baseline
 - [data/test.pkl.zip](data/test.pkl.zip) - test
 - [data/sample_submission.csv](data/sample_submission.csv) - submission example
+
+### Temporary states saved
+
 - [data/parsed_first_pages.pkl.zip](data/parsed_first_pages.pkl.zip) - 366 rows, first try
 - [data/20220326_valid_data.pkl.zip](data/20220326_valid_data.pkl.zip) - car data parsed from auto.ru (infinity only)
 - [data/20220326_catalog_data.pkl.zip](data/20220326_catalog_data.pkl.zip) - catalog data parsed from auto.ru (infinity only)
