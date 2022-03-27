@@ -7,6 +7,14 @@ Made by:
 - Petr Polyakov - [Kaggle](https://www.kaggle.com/xelorrelin), [GitHub](https://github.com/XelorR), [GitLab](https://gitlab.com/XelorR)
 - Michael Vasiliev - [Kaggle](https://www.kaggle.com/michaelvasiliev). [GitHub](https://github.com/MichaelDockers)
 
+## Setup and requirements
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+./venv/bin/python3 -m pip install -r requirements.txt
+```
+
 ## Data
 
 - [data/train_df_full_part1.pkl.zip](data/train_df_full_part1.pkl.zip) - train dataset by [Jane Voytik](https://www.kaggle.com/datasets/eugeniavoytik/final-car-price-prediction-df-parsed-sep-2021)
