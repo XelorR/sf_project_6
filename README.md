@@ -42,6 +42,7 @@ source venv/bin/activate
 - [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) - [366 rows saved](data/parsed_first_pages.pkl.zip)
 - [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb) - first view
 - [UsedCars_Project_Module_6.ipynb](UsedCars_Project_Module_6.ipynb) - updated parser
+- [20220327_model_counts.ipynb](20220327_model_counts.ipynb) - how many cars to parse
 
 ## TO DO
 
@@ -52,7 +53,7 @@ source venv/bin/activate
 - [x] new - Petr - compare Jane's train with test and insure feature consistency
 - [x] org - both - align how to split and run parser on multiple machines 
 - [ ] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
-- [ ] new - Petr - analyze number of pages to parse for each model and propose model split
+- [x] new - Petr - analyze [number of cars](20220327_model_counts.ipynb) to parse for each model and propose model split
 - [ ] new - both - run parser separately on several machines
 - [x] org - Petr - form a Kaggle Team
 - [ ] new - Petr - add "baseline" train dataset and ensure it's consistency vs test
