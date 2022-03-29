@@ -55,6 +55,12 @@ source venv/bin/activate
 - [ ] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
 - [x] new - Petr - analyze [number of cars](20220327_model_counts.ipynb) to parse for each model and propose model split
 - [ ] new - both - run parser separately on several machines
+    - [x] spb except bmw, mercedes, wolkswagen
+    - [ ] spb bmw, mercedes, wolkswagen
+    - [ ] msk volvo, lexus, honda, infinity
+    - [ ] the rest
+- [ ] new - combine parsed datasets
+- [ ] new - make parsed compatible with test
 - [x] org - Petr - form a Kaggle Team
-- [ ] new - Petr - add "baseline" train dataset and ensure it's consistency vs test
+- [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
 - [ ] org - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
