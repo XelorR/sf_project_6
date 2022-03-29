@@ -17,9 +17,12 @@
 # ## imports
 
 # %%
-import pandas as pd
+from datetime import datetime
 import re
 import json
+
+import pandas as pd
+import numpy as np
 
 from lib.data_viz_functions import *
 
@@ -41,20 +44,37 @@ train_jane.shape, train_baseline.shape, test.shape
 
 
 # %% [markdown] tags=[]
-# ## functions
+# ## preprocessing functions
 
 # %%
-def get_number_of_weeks_from_ownings(in_str):
-    if not isinstance(in_str, str):
-        return None
-    list_of_own = in_str.split()
-    if len(list_of_own) == 5:
-        return int(list_of_own[0]) * 12 + int(list_of_own[3])
+def parse_ownership_duration(train_str: str) -> float:
+
+    """
+    Returns ownership duration in days
+    """
+
+    baseline_str = "{'year': 2020, 'month': 9}"
+
+    if not isinstance(train_str, str):
+        return np.nan
+    elif "year" in str(train_str):
+        baseline_dict = json.loads(baseline_str.replace("'", '"'))
+        train_dict = json.loads(train_str.replace("'", '"'))
+
+        baseline_date = datetime.strptime(
+            f"{baseline_dict['year']}-{baseline_dict['month']}-1", "%Y-%m-%d"
+        )
+        train_date = datetime.strptime(
+            f"{train_dict['year']}-{train_dict['month']}-1", "%Y-%m-%d"
+        )
+        return (baseline_date - train_date).days
+    elif " и " in str(train_str):
+        return (
+            int(train_str.split(" ")[0]) * 365
+            + int(train_str.split(" и ")[1].split(" ")[0]) * 30
+        )
     else:
-        if list_of_own[1] in ["лет", "год"]:
-            return int(list_of_own[0]) * 12
-        else:
-            return int(list_of_own[0])
+        return int(train_str.split(" ")[0]) * 365
 
 
 def get_number_of_owners_from_owners(in_str):
@@ -72,6 +92,62 @@ def get_engine_value(in_str):
         return float(parsed_str[0])
     else:
         return None
+
+
+def get_bodytype(body_type):
+    if isinstance(body_type, str):
+        if "внедорожник 5 дв." in body_type:
+            return "внедорожник 5 дв."
+        elif "внедорожник 3 дв." in body_type:
+            return "внедорожник 3 дв."
+        elif "хэтчбек 5 дв." in body_type:
+            return "хэтчбек 5 дв."
+        elif "хэтчбек 3 дв." in body_type:
+            return "хэтчбек 3 дв."
+        elif "седан" in body_type:
+            return "седан"
+        elif "пикап двойная кабина" in body_type:
+            return "пикап двойная кабина"
+        elif "пикап полуторная кабина" in body_type:
+            return "пикап полуторная кабина"
+        elif "пикап одинарная кабина" in body_type:
+            return "пикап одинарная кабина"
+        elif "микровэн" in body_type:
+            return "микровэн"
+        elif "кабриолет" in body_type:
+            return "кабриолет"
+        elif "купе" in body_type:
+            return "купе"
+        elif "лифтбек" in body_type:
+            "лифтбек"
+
+        [
+            "лифтбек",
+            "внедорожник 5 дв.",
+            "хэтчбек 5 дв.",
+            "седан",
+            "компактвэн",
+            "универсал 5 дв.",
+            "пикап одинарная кабина",
+            "хэтчбек 3 дв.",
+            "купе",
+            "кабриолет",
+            "минивэн",
+            "пикап двойная кабина",
+            "внедорожник 3 дв.",
+            "родстер",
+            "микровэн",
+            "седан 2 дв.",
+            "купе-хардтоп",
+            "фастбек",
+            "тарга",
+            "внедорожник открытый",
+            "лимузин",
+            "пикап полуторная кабина",
+            "седан-хардтоп",
+            "фургон",
+        ]
+
 
 
 # %% [markdown]
@@ -150,10 +226,6 @@ test.iloc[2]["model_info"]
 test[test["vehicleConfiguration"] == "ALLROAD_5_DOORS AUTOMATIC 2.0"].sample(
     5, random_state=42
 )
-
-# %%
-test["Владение"] = test["Владение"].apply(get_number_of_weeks_from_ownings)
-train_jane["Владение"] = train_jane["Владение"].apply(get_number_of_weeks_from_ownings)
 
 # %%
 test["Владельцы"] = test["Владельцы"].apply(get_number_of_owners_from_owners)
@@ -300,28 +372,20 @@ train_jane.loc[train_jane.price.isna()].shape[0], train_jane.price.shape[
 #
 # $y = price$ - dropna, multiply for date course based coefficient for each dataset, take a log
 #
-# - **car_url** - why we have different rows with the same url for train?
-# - **image** - maybe same images with different urls indicate fraud? - checked - to remove
-# - **description** - to tokenize - to read more about tokenize
-# - **equipment_dict** - deserialize, expand as additional cols
-# - **complectation_dict** - deserialize, expand as additional cols
-# - **name** - to delete
-# - **vehicleConfiguration** - view and maybe split to several features if splittable, and check the mean of number 3.0
-# - **engineDisplacement** - convert to float
-# - **enginePower** - convert to integer
-# - **Владельцы** - convert to integer
-# - **Владение** - calculate number of day
-# - **used** - is it possible to create this from urls or something for other datasets?
-# - **model_name** - check NAs, compare with **name** - maybe keep only one?
-# - **vendor** - check NAs
-# - **super_gen** - do we have something to extract? We have no such col in baseline
-# - **bodyType**, **color**, **brand**, **fuelType**, **vehicleTransmission**, **Привод**, **ПТС**, **Руль** - _temporary keep as is_
+# - [ ] **description** - to tokenize - to read more about tokenize
+# - [ ] **engineDisplacement** - convert to float
+# - [ ] **enginePower** - convert to integer
+# - [ ] **Владельцы** - convert to integer
+# - [ ] **Владение** - calculate number of day
+# - [ ] **used** - is it possible to create this from urls or something for other datasets?
+# - [ ] **super_gen** - do we have something to extract? We have no such col in baseline
+# - [ ] **bodyType**, **color**, **brand**, **fuelType**, **vehicleTransmission**, **Привод**, **ПТС**, **Руль** - _temporary keep as is_
 #
 # more
 #
-# - mileage rename
-# - compare with existing features
-# - compare 4 dicts (equepment, complactation) train - test
+# - [ ] mileage rename
+# - [ ] compare with existing features
+# - [ ] compare 4 dicts (equepment, complactation) train - test
 # Numerics - fill na, log if tailed, standartize
 # https://www.kaggle.com/datasets/gmbitz/all-auto-ru-09-09-2020
 
@@ -355,11 +419,50 @@ test[test.columns.sort_values().tolist()].sample(3, random_state=42).T
 # %% [markdown]
 # ## comments on further train_baseline processing
 #
-# - bodyType - no doors specified
-# - color - hexified
-# - model_name - more standartified
-# - productionDate - different dtype
-# - Владение - to convert to number of weeks
-# - vehicleTransmission - to standartize naming
-# - ПТС - to standartize naming
-# - Руль - to standartize naming
+# - [ ] bodyType - no doors specified
+# - [ ] color - hexified
+# - [ ] model_name - more standartified
+# - [ ] productionDate - different dtype
+# - [x] Владение - to convert to number of days
+# - [ ] vehicleTransmission - to standartize naming
+# - [ ] ПТС - to standartize naming
+# - [ ] Руль - to standartize naming
+
+# %% [markdown]
+# ## merging train datasets
+
+# %%
+train_jane['sample'] = 1
+train_baseline['sample'] = 2
+train = pd.concat([train_jane, train_baseline])
+
+# %%
+train["Владение"] = train.Владение.apply(parse_ownership_duration)
+
+# %%
+train["Владение"].value_counts().head(5)
+
+# %% [markdown]
+# ## ------------------------
+
+# %%
+train.drop_duplicates(inplace=True)
+train.dropna(subset=['price'], inplace = True)
+
+# %%
+train['bodyType'] = train['bodyType'].str.lower()
+
+# %%
+test['bodyType'].unique()
+
+# %%
+train['bodyType'] = train['bodyType'].apply(get_bodytype)
+
+# %%
+train['bodyType']
+
+# %%
+train.shape
+
+# %%
+train[pd.isna(train['brand'])].count()
