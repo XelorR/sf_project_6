@@ -58,9 +58,8 @@ source venv/bin/activate
     - [x] spb except bmw, mercedes, wolkswagen, mitsubishi
     - [ ] spb mitsubishi
     - [ ] spb bmw, mercedes, wolkswagen
-    - [x] msk volvo, lexus, honda, infinity - include 
+    - [x] msk exclude mers and vw
     - [ ] the rest
-    - [ ] 
 - [ ] new - combine parsed datasets
 - [ ] new - make parsed compatible with test
 - [x] org - Petr - form a Kaggle Team
