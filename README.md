@@ -63,4 +63,4 @@ source venv/bin/activate
 - [ ] new - make parsed compatible with test
 - [x] org - Petr - form a Kaggle Team
 - [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
-- [ ] org - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
+- [ ] new - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
