@@ -65,3 +65,4 @@ source venv/bin/activate
 - [x] org - Petr - form a Kaggle Team
 - [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
 - [ ] new - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
+- [ ] decision cat of BodyType
