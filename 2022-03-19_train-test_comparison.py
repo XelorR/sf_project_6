@@ -96,59 +96,59 @@ def get_engine_value(in_str):
 
 def get_bodytype(body_type):
     if isinstance(body_type, str):
-        if "внедорожник 5 дв." in body_type:
-            return "внедорожник 5 дв."
-        elif "внедорожник 3 дв." in body_type:
-            return "внедорожник 3 дв."
-        elif "хэтчбек 5 дв." in body_type:
-            return "хэтчбек 5 дв."
-        elif "хэтчбек 3 дв." in body_type:
-            return "хэтчбек 3 дв."
-        elif "седан" in body_type:
-            return "седан"
-        elif "пикап двойная кабина" in body_type:
-            return "пикап двойная кабина"
-        elif "пикап полуторная кабина" in body_type:
-            return "пикап полуторная кабина"
-        elif "пикап одинарная кабина" in body_type:
-            return "пикап одинарная кабина"
-        elif "микровэн" in body_type:
-            return "микровэн"
-        elif "кабриолет" in body_type:
-            return "кабриолет"
-        elif "купе" in body_type:
-            return "купе"
-        elif "лифтбек" in body_type:
-            "лифтбек"
+        if 'внедорожник 5 дв.' in body_type:
+            return 'внедорожник 5 дв.'
+        elif 'внедорожник 3 дв.' in body_type:
+            return 'внедорожник 3 дв.'
+        elif 'внедорожник открытый' in body_type:
+            return 'внедорожник открытый'
+        elif 'хэтчбек 5 дв.' in body_type:
+            return 'хэтчбек 5 дв.'
+        elif 'хэтчбек 3 дв.' in body_type:
+            return 'хэтчбек 3 дв.'
+        elif 'седан' in body_type:
+            return 'седан'
+        elif 'пикап двойная кабина' in body_type:
+            return 'пикап двойная кабина'
+        elif 'пикап полуторная кабина' in body_type:
+            return 'пикап полуторная кабина'
+        elif 'пикап одинарная кабина' in body_type:
+            return 'пикап одинарная кабина'
+        elif 'микровэн' in body_type:
+            return 'микровэн'
+        elif 'кабриолет' in body_type:
+            return 'кабриолет'
+        elif 'купе' in body_type:
+            return 'купе'
+        elif 'лифтбек' in body_type:
+            return 'лифтбек'
+        elif 'лимузин' in body_type:
+            return 'лимузин'
+        elif 'лимузин' in body_type:
+            return 'лимузин'
+        elif 'минивэн' in body_type:
+            return 'минивэн'
+        elif 'универсал 5 дв.' in body_type:
+            return 'универсал 5 дв.'
+        elif 'компактвэн' in body_type:
+            return 'компактвэн'
+        elif 'родстер' in body_type:
+            return 'родстер'
+        elif 'тарга' in body_type:
+            return 'тарга'
+        elif 'фургон' in body_type:
+            return 'фургон'
+        else:
+            return body_type
+        
 
-        [
-            "лифтбек",
-            "внедорожник 5 дв.",
-            "хэтчбек 5 дв.",
-            "седан",
-            "компактвэн",
-            "универсал 5 дв.",
-            "пикап одинарная кабина",
-            "хэтчбек 3 дв.",
-            "купе",
-            "кабриолет",
-            "минивэн",
-            "пикап двойная кабина",
-            "внедорожник 3 дв.",
-            "родстер",
-            "микровэн",
-            "седан 2 дв.",
-            "купе-хардтоп",
-            "фастбек",
-            "тарга",
-            "внедорожник открытый",
-            "лимузин",
-            "пикап полуторная кабина",
-            "седан-хардтоп",
-            "фургон",
-        ]
-
-
+        ['лифтбек', 'внедорожник 5 дв.', 'хэтчбек 5 дв.', 'седан',
+        'компактвэн', 'универсал 5 дв.', 'пикап одинарная кабина',
+        'хэтчбек 3 дв.', 'купе', 'кабриолет', 'минивэн',
+        'пикап двойная кабина', 'внедорожник 3 дв.', 'родстер', 'микровэн',
+        'седан 2 дв.', 'купе-хардтоп', 'фастбек', 'тарга',
+        'внедорожник открытый', 'лимузин', 'пикап полуторная кабина',
+        'седан-хардтоп', 'фургон']
 
 # %% [markdown]
 # ## quick view
