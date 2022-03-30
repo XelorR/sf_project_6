@@ -29,7 +29,8 @@ source venv/bin/activate
 
 ### Preprocessed
 
-- to do
+- [train](data/2022-03-30_train_preprocessed.pkl.zip)
+- [test](data/2022-03-30_test_preprocessed.pkl.zip)
 
 ### Temporary saved states
 
@@ -52,7 +53,7 @@ source venv/bin/activate
 - [x] new - Michael - expand parser to all pages for each model
 - [x] new - Petr - compare Jane's train with test and insure feature consistency
 - [x] org - both - align how to split and run parser on multiple machines 
-- [ ] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
+- [x] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
 - [x] new - Petr - analyze [number of cars](20220327_model_counts.ipynb) to parse for each model and propose model split
 - [ ] new - both - run parser separately on several machines
     - [x] spb except bmw, mercedes, wolkswagen, mitsubishi
@@ -60,9 +61,12 @@ source venv/bin/activate
     - [ ] spb bmw, mercedes, wolkswagen
     - [x] msk exclude mers and vw
     - [ ] the rest
+- [ ] new - push prefinal parser 
 - [ ] new - combine parsed datasets
 - [ ] new - make parsed compatible with test
+- [ ] new - append parsed to test
 - [x] org - Petr - form a Kaggle Team
 - [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
-- [ ] new - Petr - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
-- [ ] decision cat of BodyType
+- [x] new - both - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
+- [x] new - Michael - preprocess BodyType
+- [ ] new - start EDA
