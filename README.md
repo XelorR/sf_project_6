@@ -69,4 +69,5 @@ source venv/bin/activate
 - [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
 - [x] new - both - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
 - [x] new - Michael - preprocess BodyType
+- [ ] new - multiplyer for price according to USD course (or some other idea)
 - [ ] new - start EDA
