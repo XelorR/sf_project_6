@@ -38,7 +38,9 @@ source venv/bin/activate
 - [data/20220326_valid_data.pkl.zip](data/20220326_valid_data.pkl.zip) - car data parsed from auto.ru (infinity only)
 - [data/20220326_catalog_data.pkl.zip](data/20220326_catalog_data.pkl.zip) - catalog data parsed from auto.ru (infinity only)
 
-## Notebooks
+## Notebooks and workflow
+
+![](flow.drawio.png)
 
 - [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) - [366 rows saved](data/parsed_first_pages.pkl.zip)
 - [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb) - first view
