@@ -57,12 +57,13 @@ source venv/bin/activate
 - [x] org - both - align how to split and run parser on multiple machines 
 - [x] fix - Michael - **get_urls_for_model_in_region** falling into infinite loop in case of too many pages
 - [x] new - Petr - analyze [number of cars](20220327_model_counts.ipynb) to parse for each model and propose model split
-- [ ] new - both - run parser separately on several machines
+- [x] new - both - run parser separately on several machines
     - [x] spb except bmw, mercedes, wolkswagen, mitsubishi
-    - [ ] spb mitsubishi
-    - [ ] spb bmw, mercedes, wolkswagen
+    - [x] spb mitsubishi
+    - [x] spb bmw, mercedes, wolkswagen
     - [x] msk exclude mers and vw
-    - [ ] the rest
+    - [x] the rest
+    - [ ] spb catalog
 - [ ] new - push prefinal parser 
 - [ ] new - combine parsed datasets
 - [ ] new - make parsed compatible with test
