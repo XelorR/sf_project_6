@@ -42,10 +42,10 @@ source venv/bin/activate
 
 ![](flow.drawio.png)
 
-- [UsedCars_Project_Module_6_parser.ipynb](UsedCars_Project_Module_6_parser.ipynb) - [366 rows saved](data/parsed_first_pages.pkl.zip)
-- [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb) - first view
-- [UsedCars_Project_Module_6.ipynb](UsedCars_Project_Module_6.ipynb) - updated parser
-- [20220327_model_counts.ipynb](20220327_model_counts.ipynb) - how many cars to parse
+- [cars_count](20220327_model_counts.ipynb)
+- [parser](UsedCars_Project_Module_6.ipynb)
+- [train-test_comparison](2022-03-19_train-test_comparison.ipynb)
+- [EDA](2022-03-31_train-test_EDA.ipynb)
 
 ## TO DO
 
