@@ -42,7 +42,7 @@ source venv/bin/activate
 
 ![](flow.drawio.png)
 
-- [cars_count](20220327_model_counts.ipynb)
+- [car_count](20220327_model_counts.ipynb)
 - [parser](UsedCars_Project_Module_6.ipynb)
 - [train-test_comparison](2022-03-19_train-test_comparison.ipynb)
 - [EDA](2022-03-31_train-test_EDA.ipynb)
