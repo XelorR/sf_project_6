@@ -44,7 +44,7 @@ source venv/bin/activate
 
 - [car_count](20220327_model_counts.ipynb)
 - [parser](UsedCars_Project_Module_6.ipynb)
-- [train-test_comparison](2022-03-19_train-test_comparison.ipynb)
+- [train-test_comparison](2022-04-02_train-test_comparison.ipynb)
 - [EDA](2022-03-31_train-test_EDA.ipynb)
 
 ## TO DO
