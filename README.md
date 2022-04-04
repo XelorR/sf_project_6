@@ -31,13 +31,13 @@ source venv/bin/activate
 
 ### Data
 
-#### RAW
+#### Raw
 
-- [data/train_jane](data/train_df_full_part1.pkl.zip) - dataset by [Jane Voytik](https://www.kaggle.com/datasets/eugeniavoytik/final-car-price-prediction-df-parsed-sep-2021)
-- [data/train_baseline](data/all_auto_ru_09_09_2020.pkl.zip)
+- [train_jane](data/train_df_full_part1.pkl.zip) - dataset by [Jane Voytik](https://www.kaggle.com/datasets/eugeniavoytik/final-car-price-prediction-df-parsed-sep-2021)
+- [train_baseline](data/all_auto_ru_09_09_2020.pkl.zip)
 - all_auto_ru_09_09_2020.csv - dataset by [Sokolov Aleksandr ](https://www.kaggle.com/datasets/sokolovaleks/parsing-all-moscow-auto-ru-09-09-2020)
-- [data/test](data/test.pkl.zip) - test form [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
-- [data/sample_submission](data/sample_submission.csv) - submission example from [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
+- [test](data/test.pkl.zip) - test form [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
+- [sample_submission](data/sample_submission.csv) - submission example from [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
 
 #### Parsed
 
@@ -47,12 +47,6 @@ source venv/bin/activate
 
 - [train](data/2022-03-30_train_preprocessed.pkl.zip)
 - [test](data/2022-03-30_test_preprocessed.pkl.zip)
-
-#### Temporary saved states
-
-- [data/parsed_first_pages.pkl.zip](data/parsed_first_pages.pkl.zip) - 366 rows, first try
-- [data/20220326_valid_data.pkl.zip](data/20220326_valid_data.pkl.zip) - car data parsed from auto.ru (infinity only)
-- [data/20220326_catalog_data.pkl.zip](data/20220326_catalog_data.pkl.zip) - catalog data parsed from auto.ru (infinity only)
 
 
 ## TO DO
