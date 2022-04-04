@@ -63,8 +63,8 @@ source venv/bin/activate
     - [x] spb bmw, mercedes, wolkswagen
     - [x] msk exclude mers and vw
     - [x] the rest
-    - [ ] spb catalog
-- [ ] new - push prefinal parser 
+    - [x] spb catalog
+- [x] new - Petr - update and push prefinal parser 
 - [ ] new - combine parsed datasets
 - [ ] new - make parsed compatible with test
 - [ ] new - append parsed to test
