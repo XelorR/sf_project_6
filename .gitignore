@@ -140,3 +140,8 @@ output.pkl
 # CatBoost files
 
 catboost_info/
+
+# tool large models - please DON'T push it to repo
+
+models/2022-04-08_RandomForestRegressor.joblib
+models/2022-04-08_XGBRegressor.joblib
