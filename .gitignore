@@ -136,3 +136,7 @@ dmypy.json
 # VScode files
 .vscode
 output.pkl
+
+# CatBoost files
+
+catboost_info/
