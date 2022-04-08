@@ -54,6 +54,19 @@ source venv/bin/activate
 
 - [train](data/2022-04-06_train_preprocessed.pkl.zip)
 - [test](data/2022-04-06_test_preprocessed.pkl.zip)
+- [train_premodel](data/2022-04-08_train_pre-model.parquet)
+- [test_premodel](data/2022-04-08_test_pre-model.parquet)
+
+
+### Models
+
+| Date       | Model                 | Made using file                        | MAPE   | Comments         | Kaggle |
+|------------|-----------------------|----------------------------------------|--------|------------------|--------|
+| 2022-04-08 | CatBoostRegrassor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 13.76  |                  |        |
+| 2022-04-08 | XGBRegressor          | [EDA](2022-03-31_train-test_EDA.ipynb) | 14.1   |                  |        |
+| 2022-04-08 | RandomForestRegressor | [EDA](2022-03-31_train-test_EDA.ipynb) | 14.25  |                  |        |
+| 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 405.19 | dummy encoding   |        |
+| 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 562.54 | ordinal encoding |        |
 
 
 ## TO DO
@@ -74,12 +87,14 @@ source venv/bin/activate
     - [x] the rest
     - [x] spb catalog
 - [x] new - Petr - update and push prefinal parser 
-- [ ] new - combine parsed datasets
-- [ ] new - make parsed compatible with test
-- [ ] new - append parsed to test
 - [x] org - Petr - form a Kaggle Team
 - [x] new - Petr - add "baseline" train dataset and ensure having same set of cols for all 3
 - [x] new - both - implement feature-related comments from [2022-03-19_train-test_comparison.ipynb](2022-03-19_train-test_comparison.ipynb)
 - [x] new - Michael - preprocess BodyType
-- [ ] new - multiplyer for price according to USD course (or some other idea)
-- [ ] new - start EDA
+- [x] new - multiplyer for price according to USD course (or some other idea)
+- [x] new - start EDA
+- [x] prepare first models and calculate feature importances
+- [ ] new - combine parsed datasets
+- [ ] new - make parsed compatible with test
+- [ ] new - append parsed to test
+- [ ] new - both - do experiments. A lot
