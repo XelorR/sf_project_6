@@ -9,6 +9,13 @@ Made by:
 
 ## Setup and requirements
 
+There are two **requirements** files:
+
+- [requirements.txt](requirements.txt) - used for data ingeneering, EDA and preprocessing. **Use it with python 3.10**
+- [requirements_pycaret.txt](requirements_pycaret.txt) - used for ML. **Use it with python 3.8**
+
+Envirenment setup example:
+
 ```bash
 git clone https://github.com/XelorR/sf_project_6
 cd sf_project_6

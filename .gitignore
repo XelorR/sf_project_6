@@ -108,6 +108,8 @@ env/
 venv/
 env310/
 env39/
+env_pycaret/
+env_autoPyTorch/
 ENV/
 env.bak/
 venv.bak/
