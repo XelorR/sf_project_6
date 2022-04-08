@@ -58,7 +58,7 @@ source venv/bin/activate
 - [test_premodel](data/2022-04-08_test_pre-model.parquet)
 
 
-### Models
+### Experiments
 
 | Date       | Model                 | Made using file                        | MAPE   | Comments         | Kaggle |
 |------------|-----------------------|----------------------------------------|--------|------------------|--------|
