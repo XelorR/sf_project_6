@@ -4,13 +4,13 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 from sklearn.metrics import (
     roc_auc_score,
     roc_curve,
-    classification_report,
 )
 
 
@@ -80,3 +80,23 @@ def plot_roc_auc(y_tr, y_pr):
     plt.xlabel("False Positive Rate (FPR)", fontsize=15)
     plt.legend(loc="lower right", fontsize=15)
     plt.show()
+
+
+def plot_feature_importance(importance, names, model_type):
+
+    feature_importance = np.array(importance)
+    feature_names = np.array(names)
+
+    data = {"feature_names": feature_names, "feature_imporance": feature_importance}
+
+    feat = pd.DataFrame(data)[:20]
+
+    feat.sort_values(by=["feature_imporance"], ascending=False, inplace=True)
+
+    plt.figure(figsize=(10, 8))
+
+    sns.barplot(x=feat["feature_imporance"], y=feat["feature_names"])
+
+    plt.title(model_type + " feature imporance")
+    plt.xlabel("feature imporance")
+    plt.ylabel("feature names")
