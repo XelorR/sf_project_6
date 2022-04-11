@@ -66,7 +66,7 @@ source venv/bin/activate
 | 2022-04-08 | XGBRegressor          | [EDA](2022-03-31_train-test_EDA.ipynb) | 14.1   |                  |        |
 | 2022-04-08 | RandomForestRegressor | [EDA](2022-03-31_train-test_EDA.ipynb) | 14.25  |                  |        |
 | 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 405.19 | dummy encoding   |        |
-| 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 562.54 | ordinal encoding |        |
+| 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 562.54 | label encoding   |        |
 
 
 ## TO DO
