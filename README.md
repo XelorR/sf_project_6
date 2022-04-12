@@ -67,6 +67,13 @@ source venv/bin/activate
 | 2022-04-08 | RandomForestRegressor | [EDA](2022-03-31_train-test_EDA.ipynb) | 14.25  |                  |        |
 | 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 405.19 | dummy encoding   |        |
 | 2022-04-08 | AdaBoostRegressor     | [EDA](2022-03-31_train-test_EDA.ipynb) | 562.54 | label encoding   |        |
+| 2022-04-12 | LinearRegression | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 79.46 | default params | 80.53 |
+| 2022-04-12 | KNeighborsRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 16.95 | default params | 17.75 |
+| 2022-04-12 | LGBMRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 19.1 | default params | 19.8 |
+| 2022-04-12 | LGBMRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.62 | optuned | 17.44 |
+| 2022-04-12 | CatBoostRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.85 | default params |16.5 |
+| 2022-04-12 | RandomForestRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.8 | default params | 12.6 |
+| 2022-04-12 | StackingRegressor | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.55 | default params | 13.25 |
 
 
 ## TO DO
