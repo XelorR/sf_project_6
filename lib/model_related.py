@@ -1,6 +1,3 @@
-import imp
-
-
 import os
 
 import joblib
@@ -23,5 +20,5 @@ def get_dumb_dummies(df: pd.DataFrame) -> pd.DataFrame:
     return pd.get_dummies(df, columns=df.select_dtypes("object").columns.tolist())
 
 
-def mape(y_true, y_pred):
+def mape(y_true, y_pred, **kwarg):
     return np.mean(np.abs((y_pred - y_true) / y_true))
