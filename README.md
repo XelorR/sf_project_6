@@ -36,6 +36,7 @@ source venv/bin/activate
 - [parser](UsedCars_Project_Module_6_parser_20220401.ipynb)
 - [train-test_comparison](2022-04-02_train-test_comparison.ipynb)
 - [EDA](2022-03-31_train-test_EDA.ipynb)
+- [model selection](2022-04-11_experiments_pycaret_preprocessing_and_model_selection.ipynb)
 
 ### Data
 
