@@ -117,7 +117,7 @@ source venv/bin/activate
   - due to lack of time availble we decided to drop **description** but it could be used to better feature creation
   - owning_time col dropped due to large amount of NAs in train
   - pts NAs filled with mode
-  - numerics are not normally distributed - was scaled using log2
+  - numerics are not normally distributed - was scaled using yeo-johnson instead of log
   - feature importance calculated using model's built in functionality
 - modelling
   - most of features are categorical - decided to use dummy encoding in most cases except model_name due to large amount of categories
