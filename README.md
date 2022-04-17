@@ -80,6 +80,11 @@ source venv/bin/activate
 | 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.66  | lightgbm_v2_optuned | 13.37  |
 | 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | lightgbm_v3_optuned | 13.39  |
 | 2022-04-15 | XGBRegressor             | [ensemble](2022-04-15_ensemble.ipynb)                       | 11.97  | xgb_v1_manual       | 11.69  |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_132    | 11.97  |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_139    | 11.74  |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.99  | xgb_v2_trial_134    | 11.96  |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_138    | 11.97  |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_135    | 11.97  |
 | 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.76  | etr_v1_manual       | 14.41  |
 | 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.43  | etr_v2_optuned      | 11.82  |
 | 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.96  | etr_v3_default      | 11.08  |
