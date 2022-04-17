@@ -11,7 +11,7 @@ Made by:
 
 There are two **requirements** files:
 
-- [requirements.txt](requirements.txt) - used for data ingeneering, EDA and preprocessing. **Use it with python 3.10**
+- [requirements.txt](requirements.txt) - used for data engeneering, EDA and preprocessing. **Use it with python 3.10**
 - [requirements_ml.txt](requirements_ml.txt) - used for pycaret. **Use it with python 3.7 or 3.8**
 
 Envirenment setup example:
@@ -45,7 +45,7 @@ source venv/bin/activate
 #### Raw
 
 - [train_jane](data/train_df_full_part1.pkl.zip) - dataset by [Jane Voytik](https://www.kaggle.com/datasets/eugeniavoytik/final-car-price-prediction-df-parsed-sep-2021)
-- [train_sokolov](data/all_auto_ru_09_09_2020.pkl.zip)- dataset by [Aleksandr Sokolov](https://www.kaggle.com/datasets/sokolovaleks/parsing-all-moscow-auto-ru-09-09-2020)
+- [train_sokolov](data/all_auto_ru_09_09_2020.pkl.zip) - dataset by [Aleksandr Sokolov](https://www.kaggle.com/datasets/sokolovaleks/parsing-all-moscow-auto-ru-09-09-2020)
 - [test](data/test.pkl.zip) - test form [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
 - [sample_submission](data/sample_submission.csv) - submission example from [Kaggle](https://www.kaggle.com/c/sf-dst-car-price-prediction)
 
@@ -105,7 +105,7 @@ source venv/bin/activate
 
 ## Conclusions / what was done
 
-- data srabbing, parsing and data engeneering
+- data scrabing, parsing and data engeneering
   - auto.ru have implemented new parsing protection - selenium used but worked much slower than requests - could not gather enought records
   - in 2022 we faced with more outliers and unpredictable price changes due to geopolitical situation
   - we decided to use 2 best voted datasets downloaded from Kaggle
@@ -147,6 +147,15 @@ source venv/bin/activate
   - CatBoost is the best out of the box but hard to tune
 - learned how to use Optuna for more efficient hyperparameter tuning
 - forests and extra trees are the most memory consuming things
+
+## what can be improved
+
+- better stacking using ExtraTreesRegressor with more estimators and other models with deeper tuning (we had no enough memory to create stacking we imagined)
+- tune models using two steps:
+  - most impactful parameters only
+  - fixing parameters from previous step and working on overfitting
+- buy better equipment
+- start with first working model earlier
 
 ## TO DO
 
