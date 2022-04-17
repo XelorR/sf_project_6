@@ -64,42 +64,43 @@ source venv/bin/activate
 
 ### Experiments
 
-| Date       | Model                    | Made using file                                             | MAPE   | Comments                            | Kaggle       |
-|------------|--------------------------|-------------------------------------------------------------|--------|-------------------------------------|--------------|
-| 2022-04-08 | CatBoostRegrassor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 13.76  |                                     |              |
-| 2022-04-08 | XGBRegressor             | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.1   |                                     |              |
-| 2022-04-08 | RandomForestRegressor    | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.25  |                                     |              |
-| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 405.19 | dummy encoding                      |              |
-| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 562.54 | label encoding                      |              |
-| 2022-04-12 | LinearRegression         | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 79.46  | default params                      | 80.53        |
-| 2022-04-12 | KNeighborsRegressor      | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 16.95  | default params                      | 17.75        |
-| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 19.1   | default params                      | 19.8         |
-| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.62  | optuned                             | 17.44        |
-| 2022-04-12 | CatBoostRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.85  | default params                      | 16.5         |
-| 2022-04-12 | RandomForestRegressor    | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.8   | default params                      | 12.6         |
-| 2022-04-12 | StackingRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.55  | default params                      | 13.25        |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 15.62  | lightgbm_v1_optuned                 | 17.44        |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.66  | lightgbm_v2_optuned                 | 13.37        |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | lightgbm_v3_optuned                 | 13.39        |
-| 2022-04-15 | XGBRegressor             | [ensemble](2022-04-15_ensemble.ipynb)                       | 11.97  | xgb_v1_manual                       | 11.69        |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_132                    | 11.97        |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_139                    | 11.74        |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.99  | xgb_v2_trial_134                    | 11.96        |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_138                    | 11.97        |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_135                    | 11.97        |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.76  | etr_v1_manual                       | 14.41        |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.43  | etr_v2_optuned                      | 11.82        |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.96  | etr_v3_default                      | 11.08        |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.15  | rf_v1_manual                        | 12.43        |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | rf_v2_optuned                       | 12.19        |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.75  | rf_v3_default                       | 11.98        |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v1                         | 11.89        |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v2                         | 11.5         |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v3                         | 11.59        |
-| 2022-04-15 | ExtraTreesRegressor meta | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v4                         | 12.27        |
-| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 300 estimators                      | 11.02602     |
-| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 500 estimators                      | 11.00694     |
-| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 800 estimators - **the best model** | **11.00655** |
+| Date       | Model                    | Made using file                                             | MAPE   | Comments                             | Kaggle       |
+|------------|--------------------------|-------------------------------------------------------------|--------|--------------------------------------|--------------|
+| 2022-04-08 | CatBoostRegrassor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 13.76  |                                      |              |
+| 2022-04-08 | XGBRegressor             | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.1   |                                      |              |
+| 2022-04-08 | RandomForestRegressor    | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.25  |                                      |              |
+| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 405.19 | dummy encoding                       |              |
+| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 562.54 | label encoding                       |              |
+| 2022-04-12 | LinearRegression         | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 79.46  | default params                       | 80.53        |
+| 2022-04-12 | KNeighborsRegressor      | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 16.95  | default params                       | 17.75        |
+| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 19.1   | default params                       | 19.8         |
+| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.62  | optuned                              | 17.44        |
+| 2022-04-12 | CatBoostRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.85  | default params                       | 16.5         |
+| 2022-04-12 | RandomForestRegressor    | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.8   | default params                       | 12.6         |
+| 2022-04-12 | StackingRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.55  | default params                       | 13.25        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 15.62  | lightgbm_v1_optuned                  | 17.44        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.66  | lightgbm_v2_optuned                  | 13.37        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | lightgbm_v3_optuned                  | 13.39        |
+| 2022-04-15 | XGBRegressor             | [ensemble](2022-04-15_ensemble.ipynb)                       | 11.97  | xgb_v1_manual                        | 11.69        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_132                     | 11.97        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_139                     | 11.74        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.99  | xgb_v2_trial_134                     | 11.96        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_138                     | 11.97        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_135                     | 11.97        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.76  | etr_v1_manual                        | 14.41        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.43  | etr_v2_optuned                       | 11.82        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.96  | etr_v3_default                       | 11.08        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.15  | rf_v1_manual                         | 12.43        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | rf_v2_optuned                        | 12.19        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.75  | rf_v3_default                        | 11.98        |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v1                          | 11.89        |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v2                          | 11.5         |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v3                          | 11.59        |
+| 2022-04-15 | ExtraTreesRegressor meta | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v4                          | 12.27        |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 300 estimators                       | 11.02602     |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 500 estimators                       | 11.00694     |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 800 estimators                       | 11.00655     |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 1200 estimators - **the best model** | **11.00263** |
 
 
 ## Conclusions / what was done
