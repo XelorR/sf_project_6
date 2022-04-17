@@ -145,3 +145,9 @@ catboost_info/
 
 models/2022-04-08_RandomForestRegressor.joblib
 models/2022-04-08_XGBRegressor.joblib
+models/etr*
+models/rf*
+
+# submissions
+
+*.csv
