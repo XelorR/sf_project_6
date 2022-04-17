@@ -38,6 +38,7 @@ source venv/bin/activate
 - [model selection](2022-04-11_experiments_pycaret_preprocessing_and_model_selection.ipynb)
 - [model tuning](2022-04-12_experiments-sklearn.ipynb)
 - [ensemble](2022-04-15_ensemble.ipynb)
+- more in experiments section
 
 ### Data
 
@@ -62,40 +63,88 @@ source venv/bin/activate
 
 ### Experiments
 
-| Date       | Model                    | Made using file                                             | MAPE   | Comments            | Kaggle |
-|------------|--------------------------|-------------------------------------------------------------|--------|---------------------|--------|
-| 2022-04-08 | CatBoostRegrassor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 13.76  |                     |        |
-| 2022-04-08 | XGBRegressor             | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.1   |                     |        |
-| 2022-04-08 | RandomForestRegressor    | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.25  |                     |        |
-| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 405.19 | dummy encoding      |        |
-| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 562.54 | label encoding      |        |
-| 2022-04-12 | LinearRegression         | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 79.46  | default params      | 80.53  |
-| 2022-04-12 | KNeighborsRegressor      | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 16.95  | default params      | 17.75  |
-| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 19.1   | default params      | 19.8   |
-| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.62  | optuned             | 17.44  |
-| 2022-04-12 | CatBoostRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.85  | default params      | 16.5   |
-| 2022-04-12 | RandomForestRegressor    | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.8   | default params      | 12.6   |
-| 2022-04-12 | StackingRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.55  | default params      | 13.25  |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 15.62  | lightgbm_v1_optuned | 17.44  |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.66  | lightgbm_v2_optuned | 13.37  |
-| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | lightgbm_v3_optuned | 13.39  |
-| 2022-04-15 | XGBRegressor             | [ensemble](2022-04-15_ensemble.ipynb)                       | 11.97  | xgb_v1_manual       | 11.69  |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_132    | 11.97  |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_139    | 11.74  |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.99  | xgb_v2_trial_134    | 11.96  |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_138    | 11.97  |
-| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_135    | 11.97  |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.76  | etr_v1_manual       | 14.41  |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.43  | etr_v2_optuned      | 11.82  |
-| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.96  | etr_v3_default      | 11.08  |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.15  | rf_v1_manual        | 12.43  |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | rf_v2_optuned       | 12.19  |
-| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.75  | rf_v3_default       | 11.98  |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v1         | 11.89  |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v2         | 11.5   |
-| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v3         | 11.59  |
-| 2022-04-15 | ExtraTreesRegressor meta | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v4         | 12.27  |
+| Date       | Model                    | Made using file                                             | MAPE   | Comments                            | Kaggle       |
+|------------|--------------------------|-------------------------------------------------------------|--------|-------------------------------------|--------------|
+| 2022-04-08 | CatBoostRegrassor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 13.76  |                                     |              |
+| 2022-04-08 | XGBRegressor             | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.1   |                                     |              |
+| 2022-04-08 | RandomForestRegressor    | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 14.25  |                                     |              |
+| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 405.19 | dummy encoding                      |              |
+| 2022-04-08 | AdaBoostRegressor        | [EDA](2022-03-31_train-test_EDA.ipynb)                      | 562.54 | label encoding                      |              |
+| 2022-04-12 | LinearRegression         | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 79.46  | default params                      | 80.53        |
+| 2022-04-12 | KNeighborsRegressor      | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 16.95  | default params                      | 17.75        |
+| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 19.1   | default params                      | 19.8         |
+| 2022-04-12 | LGBMRegressor            | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.62  | optuned                             | 17.44        |
+| 2022-04-12 | CatBoostRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 15.85  | default params                      | 16.5         |
+| 2022-04-12 | RandomForestRegressor    | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.8   | default params                      | 12.6         |
+| 2022-04-12 | StackingRegressor        | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 13.55  | default params                      | 13.25        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 15.62  | lightgbm_v1_optuned                 | 17.44        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.66  | lightgbm_v2_optuned                 | 13.37        |
+| 2022-04-15 | LGBMRegressor            | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | lightgbm_v3_optuned                 | 13.39        |
+| 2022-04-15 | XGBRegressor             | [ensemble](2022-04-15_ensemble.ipynb)                       | 11.97  | xgb_v1_manual                       | 11.69        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_132                    | 11.97        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_139                    | 11.74        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.99  | xgb_v2_trial_134                    | 11.96        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.97  | xgb_v2_trial_138                    | 11.97        |
+| 2022-04-15 | XGBRegressor             | [experiments sklearn](2022-04-12_experiments-sklearn.ipynb) | 11.98  | xgb_v2_trial_135                    | 11.97        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.76  | etr_v1_manual                       | 14.41        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.43  | etr_v2_optuned                      | 11.82        |
+| 2022-04-15 | ExtraTreesRegressor      | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.96  | etr_v3_default                      | 11.08        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 13.15  | rf_v1_manual                        | 12.43        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.68  | rf_v2_optuned                       | 12.19        |
+| 2022-04-15 | RandomForestRegressor    | [ensemble](2022-04-15_ensemble.ipynb)                       | 12.75  | rf_v3_default                       | 11.98        |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v1                         | 11.89        |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v2                         | 11.5         |
+| 2022-04-15 | CatBoostRegressor meta   | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v3                         | 11.59        |
+| 2022-04-15 | ExtraTreesRegressor meta | [ensemble](2022-04-15_ensemble.ipynb)                       |        | blending_v4                         | 12.27        |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 300 estimators                      | 11.02602     |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 500 estimators                      | 11.00694     |
+| 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 800 estimators - **the best model** | **11.00655** |
 
+
+## Conclusions / what was done
+
+- data srabbing, parsing and data engeneering
+  - auto.ru have implemented new parsing protection - selenium used but worked much slower than requests - could not gather enought records
+  - in 2022 we faced with more outliers and unpredictable price changes due to geopolitical situation
+  - we decided to use 2 best voted datasets downloaded from Kaggle
+  - we have combined 2 pre-parsed datasets: from 2020 and 2021, price in 2021 was corrected to be similar to 2020 and comparable to test data
+  - features was reformatted to make both datasets similar to each other
+  - all features which have one or less categories dropped
+  - features unique to only one dataset dropped
+- EDA
+  - due to lack of time availble we decided to drop **description** but it could be used to better feature creation
+  - owning_time col dropped due to large amount of NAs in train
+  - pts NAs filled with mode
+  - numerics are not normally distributed - was scaled using log2
+  - feature importance calculated using model's built in functionality
+- modelling
+  - most of features are categorical - decided to use dummy encoding in most cases except model_name due to large amount of categories
+  - model_name encoded with LabelEncoding
+  - normalized numeric features using RobustScaler
+  - took a log of Label col ("price") to convert outliers
+  - model selection done using **pycaret** - etr, catboost, lightgbm, xgboost, rf and knn tooked for futher experiments and tuning
+  - most valuable kaggle-improvers are RandomForestRegressor and ExtraTreesRegressor
+  - by some undescoverable reason blending and stacking of best model wasn't omprove the score
+  - best score achieved just manually tweaking ExtraTreesRegressor
+
+## insights / what was learned
+
+- ADA is the worse model despite being boostin - all others worked much better
+- Trees are good for categorical datasets
+- Model tuning is better to use from:
+  - laptop for CPU-poered models
+  - Google Colab for GPU-powered and memory intensive models
+- virtual machines are good to paralellize parsing if selenium used
+- more machines and more resources needed to do enough experiments and finetune model parameters
+- git repos are very valuable for team work: saving notebooks, pre-tuned models and pre-pocessed data was very useful
+- you can serialize and compress large datasets to put it into github
+- you can save dataset on GitHub and use direct link to it from either local machine or Colab/Kaggle notebooks
+- we got deeper understanding of modern boosting algorithms such as XGBoost, CatBoost and LightGBM:
+  - XGBoost performs more like sklearn GBM and showed better results with this exact competition
+  - LightGBM is the fastest learning and good for first sight and overview
+  - CatBoost is the best out of the box but hard to tune
+- learned how to use Optuna for more efficient hyperparameter tuning
+- forests and extra trees are the most memory consuming things
 
 ## TO DO
 
@@ -125,4 +174,4 @@ source venv/bin/activate
 - [ ] new - combine parsed datasets
 - [ ] new - make parsed compatible with test
 - [ ] new - append parsed to test
-- [ ] new - both - do experiments. A lot
+- [x] new - both - do experiments. A lot
