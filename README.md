@@ -101,6 +101,7 @@ source venv/bin/activate
 | 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 500 estimators                       | 11.00694     |
 | 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 800 estimators                       | 11.00655     |
 | 2022-04-17 | ExtraTreesRegressor      | [etr notebook](model_ExtraTrees_optuna.ipynb)               |        | 1200 estimators - **the best model** | **11.00263** |
+| 2022-04-26 | Keras                    | [model_keras_v1.ipynb](model_keras_v1.ipynb)                | 14.42  | very simple nn just to play with API | 15.49165     |
 
 
 ## Conclusions / what was done
