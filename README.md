@@ -51,7 +51,7 @@ source venv/bin/activate
 
 #### Parsed
 
-- [SPB](20220401_spb_parsed_data.pkl.zip
+- [SPB](20220401_spb_parsed_data.pkl.zip)
 - ...to combine and specify others
 
 #### Preprocessed
